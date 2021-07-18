@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController_Mode2 : MonoBehaviour
 {
     public float moveSpeed;
     public CharacterController characterController;
