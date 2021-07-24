@@ -350,6 +350,7 @@ MonoBehaviour:
   characterController: {fileID: 1216247441}
   mainCamera: {fileID: 707168320}
   turnSmoothTime: 0.1
+  _cameraRelPosition: {x: -20, y: -10, z: 0}
 --- !u!114 &1216247440
 MonoBehaviour:
   m_ObjectHideFlags: 0
