@@ -5,33 +5,39 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
 
-[Serializable]
-public class IntEvent : UnityEvent<int> { }
-[Serializable]
-public class HealthEvent: UnityEvent<int, GameObject>{}
+// [Serializable]
+// public class HealthEvent: UnityEvent<int, GameObject>{}
+//
 [Serializable]
 public class CharacterEvent: UnityEvent<GameObject>{}
+
+
+
+
 public class Health : MonoBehaviour
 {
     public int maxHealth;
 
     public int currentHealth;
-
-    public UnityEvent isDeadEvent;
-    public IntEvent setHealthEvent;
-    public IntEvent setMaxHealthEvent;
-
+    
     public CharacterEvent hasDiedEvent = null;
-    public HealthEvent setHealthEvent1 = null;
-    public HealthEvent setMaxHealthEvent1 = null;
+    // public HealthEvent setHealthEvent = null;
+    // public HealthEvent setMaxHealthEvent = null;
+    
+    public event EventHandler<int> setHealthEvent;
+    public event EventHandler<int> setMaxHealthEvent;
+
+    //public event EventHandler hasDiedEvent;
+    
     public void ResetHealth()
     {
         currentHealth = maxHealth;
-        setMaxHealthEvent?.Invoke(maxHealth);
-        setHealthEvent?.Invoke(maxHealth);
+
+        // setMaxHealthEvent?.Invoke(maxHealth, gameObject);
+        // setHealthEvent?.Invoke(maxHealth, gameObject);
         
-        setMaxHealthEvent1?.Invoke(maxHealth, gameObject);
-        setHealthEvent1?.Invoke(maxHealth, gameObject);
+        setMaxHealthEvent?.Invoke(gameObject, maxHealth);
+        setHealthEvent?.Invoke(gameObject, maxHealth);
 
     }
     
@@ -39,14 +45,14 @@ public class Health : MonoBehaviour
     {
         currentHealth -= damage;
         
-        setHealthEvent?.Invoke(currentHealth);
-        setHealthEvent1?.Invoke(currentHealth, gameObject);
+        // setHealthEvent?.Invoke(currentHealth, gameObject);
+        setHealthEvent?.Invoke(gameObject, currentHealth);
 
         if (currentHealth <= 0)
         {
             hasDiedEvent?.Invoke(gameObject); 
+            //hasDiedEvent?.Invoke(gameObject, new EventArgs()); 
         }
-        
     }
     
     // Start is called before the first frame update

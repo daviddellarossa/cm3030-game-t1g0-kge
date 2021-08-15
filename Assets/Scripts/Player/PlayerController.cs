@@ -16,6 +16,25 @@ public class PlayerController : MonoBehaviour
     
     private Vector3 _moveDirection;
 
+    [SerializeField]private Health health;
+    [SerializeField] private HealthBar healthBar;
+    
+    private void Awake()
+    {
+        if (health != null && healthBar != null)
+        {
+            health.setHealthEvent += (sender, i) =>
+            {
+                healthBar.SetHealth(i);
+            };
+
+            health.setMaxHealthEvent += (sender, i) =>
+            {
+                healthBar.SetMaxHealth(i);
+            };
+        }
+    }
+
     public void FixedUpdate()
     {
         MovePlayerAndCamera();
