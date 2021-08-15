@@ -75,4 +75,13 @@ public class PlayerController : MonoBehaviour
         cameraTransform.LookAt(playerTransform);
 
     }
+    public void TakeDamageAction(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log("Damage taken");
+            
+            gameObject.GetComponent<Health>().TakeDamage(20);
+        }
+    }
 }

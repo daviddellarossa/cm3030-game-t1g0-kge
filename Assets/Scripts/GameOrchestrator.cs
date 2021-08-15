@@ -36,4 +36,10 @@ public class GameOrchestrator : MonoBehaviour
         Debug.Log("Respawning Player");
         //player = GameObject.Instantiate(player);
     }
+
+    public void CharacterHasDied(GameObject gameObject)
+    {
+        Debug.Log($"GameObject {gameObject.name} dies");
+        Destroy(gameObject);
+    }
 }
