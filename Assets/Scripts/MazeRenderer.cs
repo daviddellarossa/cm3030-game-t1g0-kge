@@ -1,9 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class MazeRenderer : MonoBehaviour
 {
+    public Boolean doRender;
+    
     [SerializeField]
     [Range(1, 50)]
     private int width = 10;
@@ -24,8 +28,11 @@ public class MazeRenderer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var maze = MazeGenerator.Generate(width, height);
-        Draw(maze);
+        if (doRender)
+        {
+            var maze = MazeGenerator.Generate(width, height);
+            Draw(maze);
+        }
     }
 
     private void Draw(WallState[,] maze)
@@ -80,12 +87,5 @@ public class MazeRenderer : MonoBehaviour
 
         }
 
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
