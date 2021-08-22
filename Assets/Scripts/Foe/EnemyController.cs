@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class NavMeshAgentController : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
     public GameObject[] patrolPoints;
     public GameObject Player;
