@@ -45,23 +45,17 @@ public class GameOrchestrator : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void HintTriggereEnter_EventHandler(string message)
+    public void HintTriggereEnter_EventHandler(HintMessage hint)
     {
-        Debug.Log(message);
+        Debug.Log(hint.text);
         var hintDisplay = GameObject.FindGameObjectWithTag("HintDisplay");
         var textMeshPro = hintDisplay.GetComponent<TextMeshProUGUI>();
-        textMeshPro.text = message;
-        Invoke(nameof(ClearMessage), 3);
+        textMeshPro.text = hint.text;
+        Invoke(nameof(ClearMessage), hint.duration);
+
     }
     
-    public void HintTriggereEnter2_EventHandler(TextMeshPro message)
-    {
-        Debug.Log(message);
-        //var hintDisplay = GameObject.FindGameObjectWithTag("HintDisplay");
-        //var canvasRenderer = hintDisplay.GetComponent<CanvasRenderer>();
-        //message.renderer = canvasRenderer;
-        //Invoke(nameof(ClearMessage), 3);
-    }
+
     
     public void HintTriggereExit_EventHandler()
     {

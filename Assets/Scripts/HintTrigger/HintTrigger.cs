@@ -6,19 +6,24 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [Serializable]
-public class HintTriggeredEnterEvent : UnityEvent<string>{}
+public class HintMessage
+{
+    [Multiline]
+    public string text;
+    [Range(1, 20)] public int duration;
+}
 
 [Serializable]
-public class HintTriggeredEnterEvent2 : UnityEvent<TextMeshPro>{}
+public class HintTriggeredEnterEvent : UnityEvent<HintMessage>{}
 
 public class HintTrigger : MonoBehaviour
 {
-    public string message;
+    public HintMessage hint;
+    
     public bool fireOnlyOnce = false;
     public bool fired = false;
     
     public HintTriggeredEnterEvent HintTriggeredEnter;
-    public HintTriggeredEnterEvent2 HintTriggeredEnter2;
     
     public UnityEvent HintTriggeredExit;
     
@@ -26,16 +31,9 @@ public class HintTrigger : MonoBehaviour
     {
         if (!(fireOnlyOnce & fired))
         {
-            HintTriggeredEnter?.Invoke(message);
-            var tmp = GetComponent<TextMeshPro>();
-            HintTriggeredEnter2?.Invoke(tmp);
+            HintTriggeredEnter?.Invoke(hint);
             fired = true;
         }
-    }
-
-    private void BuildMessage()
-    {
-        
     }
 
     private void OnTriggerExit(Collider other)
