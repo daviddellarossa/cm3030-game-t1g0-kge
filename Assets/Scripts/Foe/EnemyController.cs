@@ -2,21 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 
 public class EnemyController : MonoBehaviour
 {
     public GameObject[] patrolPoints;
-    public GameObject Player;
-    private NavMeshAgent Mob;
-    public float EnemySightRange = 4.0f;
-
+    
+    private NavMeshAgent agent;
+    private GameObject player;
     private int destinationIndex = 0;
     private GameObject destination;
+    
+    // Attacking
+    public float timeBetweenAttacks;
+    private bool alreadyAttacked = false;
+    public GameObject projectilePrefab;
+    public GameObject projectileStart;
+    
+    // States
+    [FormerlySerializedAs("EnemySightRange")] public float sightRange = 4.0f;
+    public float attackRange;
+    public bool playerInSightRange, playerInAttackRange;
     
     // Start is called before the first frame update
     void Start()
     {
-        Mob = GetComponent<NavMeshAgent>();
+        player = GameObject.Find("Player");
+        agent = GetComponent<NavMeshAgent>();
 
         chooseDestination();
     }
@@ -25,20 +37,27 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         
-        float distance = Vector3.Distance(transform.position, Player.transform.position);
-        
-        if (distance < EnemySightRange)
+        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+
+        playerInSightRange = distanceToPlayer <= sightRange;
+        playerInAttackRange = distanceToPlayer <= attackRange;
+
+        if (!playerInSightRange)
         {
-            chasePlayer();
+            Patrol();
+        } else
+        {
+            ChasePlayer();
         }
-        else
+        
+        if (playerInAttackRange)
         {
-            patrol();
+            AttackPlayer();
         }
 
     }
 
-    void patrol()
+    void Patrol()
     {
         SetDestination();
         
@@ -48,12 +67,33 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    void chasePlayer()
+    void ChasePlayer()
     {
-        transform.LookAt(Player.transform);
-        Mob.SetDestination(Player.transform.position);
+        transform.LookAt(player.transform);
+        agent.SetDestination(player.transform.position);
     }
 
+    void AttackPlayer()
+    {
+        // Debug.Log("alreadyAttacked" + alreadyAttacked);
+        if (!alreadyAttacked)
+        {
+            GameObject projectile = Instantiate(projectilePrefab, transform.position + transform.forward * 1f + transform.up * 2f, transform.rotation);
+            Rigidbody rb = projectile.GetComponent<Rigidbody>();
+            rb.AddForce(transform.forward * 35f, ForceMode.Impulse);
+            // rb.AddForce(transform.up * 5f, ForceMode.Impulse);
+            
+            alreadyAttacked = true;
+            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+        }
+    }
+
+    void ResetAttack()
+    {
+        alreadyAttacked = false;
+    }
+
+    
     void chooseDestination()
     {
         destinationIndex = (destinationIndex + 1) % patrolPoints.Length;
@@ -62,7 +102,7 @@ public class EnemyController : MonoBehaviour
 
     void SetDestination()
     {
-        Mob.SetDestination(new Vector3(
+        agent.SetDestination(new Vector3(
             destination.transform.position.x,
             transform.position.y,
             destination.transform.position.z));
