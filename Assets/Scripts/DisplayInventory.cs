@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class DisplayInventory : MonoBehaviour
 {
+    public GameObject inventoryPrefab;
     public InventoryObject inventory;
 
     public int X_SPACE_BETWEN_ITEM;
@@ -29,7 +31,8 @@ public class DisplayInventory : MonoBehaviour
     {
         for (int i = 0; i < inventory.Container.Count; i++)
         {
-            var obj = Instantiate(inventory.Container[i].item.prefab, Vector3.zero, Quaternion.identity, transform);
+            var obj = Instantiate(inventoryPrefab, Vector3.zero, Quaternion.identity, transform);
+            obj.transform.GetChild(0).GetComponentInChildren<Image>().sprite = 
             obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
             obj.GetComponentInChildren<TextMeshProUGUI>().text = inventory.Container[i].amount.ToString("n0");
             itemsDisplayed.Add(inventory.Container[i], obj);
