@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Minicamera
   - Enemy
+  - HintTrigger
+  - HintDisplay
   layers:
   - Default
   - TransparentFX
