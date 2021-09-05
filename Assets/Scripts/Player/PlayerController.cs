@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
+using Quaternion = UnityEngine.Quaternion;
+using Vector2 = UnityEngine.Vector2;
+using Vector3 = UnityEngine.Vector3;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,10 +15,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private CharacterController characterController;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private float turnSmoothTime = 0.1f;
-    //Camera
-    [SerializeField] private Vector3 cameraRelPosition;
     
-    private Vector3 _moveDirection;
+    private Vector3 movement;
 
     [SerializeField]private Health health;
     [SerializeField] private HealthBar healthBar;
@@ -37,7 +39,7 @@ public class PlayerController : MonoBehaviour
 
     public void FixedUpdate()
     {
-        MovePlayerAndCamera();
+        MovePlayer();
     }
 
     public void Fire(InputAction.CallbackContext context)
@@ -50,49 +52,48 @@ public class PlayerController : MonoBehaviour
         var inputVector = context.ReadValue<Vector2>();
         Debug.Log($"Move: {inputVector}");
         
-        _moveDirection = new Vector3(inputVector.x, 0f, inputVector.y);
+        movement = new Vector3(inputVector.x, 0f, inputVector.y);
     }
 
-    private void MovePlayerAndCamera()
+    private void MovePlayer()
     {
         var cameraTransform = mainCamera.transform;
         var playerTransform = transform;
 
+        var move = new Vector3(0, 0, movement.z);
+        var strafe = new Vector3(movement.x, 0, 0);
+
         //Get the forward direction respect to camera ( this points slightly down, therefore we set y = 0)
-        //var cameraForward = cameraTransform.forward;
         var cameraForward = cameraTransform.forward;
         cameraForward.y = 0;
         
-        //Relative rotation of camera respect to world
-        var cameraRelativeRotation = Quaternion.FromToRotation(Vector3.forward, cameraForward);
-        
         //Target look direction based on user input
-        var lookToward = cameraRelativeRotation * _moveDirection;
-        
+        var lookToward = cameraForward * Math.Sign(movement.z);
+
         //If there is input
-        if (_moveDirection.sqrMagnitude > 0)
+        if (move.sqrMagnitude > 0)
         {
             //calculate the rotation angle to go from current direction to target direction
             var targetAngle = Vector3.SignedAngle(Vector3.forward, lookToward, Vector3.up);
             var targetRotation = Quaternion.Euler(0, targetAngle, 0);
             //smooth rotation so as not to have sharp movements
             var smoothedRotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSmoothTime);
-            //Debug.Log($"Target: {targetRotation}, smoothed: {smoothedRotation}");
             //apply rotation
             transform.rotation = smoothedRotation;
         }
+        var moveVelocity = playerTransform.forward * (moveSpeed * move.magnitude);
+
+        //Apply strafe to moveVelocity
+        if (strafe.sqrMagnitude > 0)
+        {
+            //strafe is always relative to camera
+            var strafeVelocity = cameraTransform.right * (moveSpeed * strafe.magnitude * Math.Sign(strafe.x));
+            moveVelocity += strafeVelocity;
+        }
         
         //Normalize speed
-        var moveVelocity = playerTransform.forward * (moveSpeed * _moveDirection.sqrMagnitude);
         characterController.SimpleMove(moveVelocity);
         
-        //Camera orientation
-        var vectorCameraToPlayer = playerTransform.position - cameraRelPosition;
-        cameraTransform.position = vectorCameraToPlayer;
-        
-        //Camera always looks at player
-        cameraTransform.LookAt(playerTransform);
-
     }
     public void TakeDamageAction(InputAction.CallbackContext context)
     {       
@@ -100,7 +101,12 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Damage taken");
             
-            gameObject.GetComponent<Health>().TakeDamage(20);
+            TakeDamage(20);
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health.TakeDamage(damage);
     }
 }
