@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d229cba639e9b404ca42db9aac904367, type: 3}
   m_Name: Key
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7039225931962645446, guid: fca94fc6747263a49915a3bbdb7dab8b, type: 3}
+  Id: 0
+  uiDisplay: {fileID: 21300000, guid: a8ceee378d04c6c41bafe237a3affb7a, type: 3}
   type: 2
   description: A random key you found in the graveyard.

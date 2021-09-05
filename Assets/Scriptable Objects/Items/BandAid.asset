@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9d16371ec5e02040a337e5e5036a5e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 79a5ac0456ebcc847b4e369881b811ee, type: 3}
   m_Name: BandAid
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6360864490768975966, guid: 83078d871b559324ba9072f1fdb0c63b, type: 3}
-  type: 0
-  description: So it hurts a little less.
+  Id: 0
+  uiDisplay: {fileID: 21300000, guid: 028df152f9bad3d44b996ba82e1dab39, type: 3}
+  type: 2
+  description: Restores a little health.
   restoreHealthValue: 20

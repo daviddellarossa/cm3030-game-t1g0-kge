@@ -4,8 +4,9 @@ using UnityEngine;
 
 public enum ItemType
 {
-    HealthPack,
+    HealthPotion,
     Battery,
+    BandAid,
     Default
 }
 public abstract class ItemObject : ScriptableObject
