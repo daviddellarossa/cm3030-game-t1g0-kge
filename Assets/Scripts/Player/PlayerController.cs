@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour
 
     }
     public void TakeDamageAction(InputAction.CallbackContext context)
-    {
+    {       
         if (context.performed)
         {
             Debug.Log("Damage taken");

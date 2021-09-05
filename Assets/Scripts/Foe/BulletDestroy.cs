@@ -7,10 +7,13 @@ public class BulletDestroy : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("asdfpoiu");
         if (!collision.collider.CompareTag("Enemy"))
         {
             Destroy(gameObject);
+            if (collision.collider.CompareTag("Player"))
+            {
+                GameObject.Find("Player").GetComponent<Health>().TakeDamage(20);
+            }
         }
     }
 }
