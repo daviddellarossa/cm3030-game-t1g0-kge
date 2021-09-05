@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Minicamera
+  - Enemy
+  - HintTrigger
+  - HintDisplay
   layers:
   - Default
   - TransparentFX

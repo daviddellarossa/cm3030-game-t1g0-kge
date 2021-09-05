@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -41,5 +43,29 @@ public class GameOrchestrator : MonoBehaviour
     {
         Debug.Log($"GameObject {gameObject.name} dies");
         Destroy(gameObject);
+    }
+
+    public void HintTriggereEnter_EventHandler(HintMessage hint)
+    {
+        Debug.Log(hint.text);
+        var hintDisplay = GameObject.FindGameObjectWithTag("HintDisplay");
+        var textMeshPro = hintDisplay.GetComponent<TextMeshProUGUI>();
+        textMeshPro.text = hint.text;
+        Invoke(nameof(ClearMessage), hint.duration);
+
+    }
+    
+
+    
+    public void HintTriggereExit_EventHandler()
+    {
+        //Debug.Log("Clear message");
+    }
+
+    public void ClearMessage()
+    {
+        var hintDisplay = GameObject.FindGameObjectWithTag("HintDisplay");
+        var textMeshPro = hintDisplay.GetComponent<TextMeshProUGUI>();
+        textMeshPro.text = String.Empty;
     }
 }
