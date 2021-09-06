@@ -16,4 +16,9 @@ MonoBehaviour:
   uiDisplay: {fileID: 21300000, guid: 028df152f9bad3d44b996ba82e1dab39, type: 3}
   type: 2
   description: Restores a little health.
-  restoreHealthValue: 20
+  buffs:
+  - attribute: 0
+    value: 0
+    min: 10
+    max: 15
+  restoreHealthValue: 15
