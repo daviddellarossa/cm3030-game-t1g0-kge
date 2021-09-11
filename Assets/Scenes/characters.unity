@@ -1219,10 +1219,10 @@ MonoBehaviour:
     type: 3}
   inventory: {fileID: 11400000, guid: 5b2d2c18ac65a44418a9045efc4e4ac7, type: 2}
   X_SPACE_BETWEN_ITEM: 0
-  X_START: 330
+  X_START: 0
   NUMBER_OF_COLUMNS: 1
-  Y_SPACE_BETWEEN_ITEMS: 50
-  Y_START: -130
+  Y_SPACE_BETWEEN_ITEMS: 90
+  Y_START: 90
 --- !u!114 &2029585689
 MonoBehaviour:
   m_ObjectHideFlags: 0
