@@ -31,6 +31,6 @@ public class Player : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        //inventory.Container.Items = new InventorySlot[4];
+        inventory.Container.Items.Clear();
     }
 }

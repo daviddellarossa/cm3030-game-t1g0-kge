@@ -57,10 +57,12 @@ public class DisplayInventory : MonoBehaviour
 
             if (itemsDisplayed.ContainsKey(slot))
             {
+                //update number by sprite to show amount of item
                 itemsDisplayed[slot].GetComponentInChildren<TextMeshProUGUI>().text = slot.amount.ToString("n0");
             }
             else
             {
+                //create new item
                 var obj = Instantiate(inventoryPrefab, Vector3.zero, Quaternion.identity, transform);
                 obj.transform.GetChild(0).GetComponentInChildren<Image>().sprite = inventory.database.GetItem[slot.item.Id].uiDisplay;
                 obj.GetComponent<RectTransform>().localPosition = GetPosition(i);

@@ -15,12 +15,14 @@ public class InventoryObject : ScriptableObject
 
     public void AddItem(Item _item, int _amount)
     {
+        //if any buffs, create new item
         if (_item.buffs.Length > 0)
         {
             Container.Items.Add(new InventorySlot(_item.Id, _item, _amount));
             return;
         }
 
+        //cycle over and see whether item exists
         for (int i = 0; i < Container.Items.Count; i++)
         {
             if (Container.Items[i].item.Id == _item.Id)
