@@ -35,12 +35,16 @@ public class InventoryObject : ScriptableObject
     [ContextMenu("Save")]
     public void Save()
     {
+        //save using a JSON file that is editable
+        //serialize object into a string
         string saveData = JsonUtility.ToJson(this, true);
         BinaryFormatter bf = new BinaryFormatter();
+        //creates a file at the save path
         FileStream file = File.Create(string.Concat(Application.persistentDataPath, savePath));
         bf.Serialize(file, saveData);
         file.Close();
 
+        //saving as a private file that can't be edited
         /*IFormatter formatter = new BinaryFormatter();
         Stream stream = new FileStream(string.Concat(Application.persistentDataPath, savePath), FileMode.Create, FileAccess.Write);
         formatter.Serialize(stream, Container);
@@ -50,13 +54,17 @@ public class InventoryObject : ScriptableObject
     [ContextMenu("Load")]
     public void Load()
     {
-        if(File.Exists(string.Concat(Application.persistentDataPath, savePath)))
+        if (File.Exists(string.Concat(Application.persistentDataPath, savePath)))
         {
+            //if the file was public
             BinaryFormatter bf = new BinaryFormatter();
+            //opens file
             FileStream file = File.Open(string.Concat(Application.persistentDataPath, savePath), FileMode.Open);
+            //deserializes file back into scriptable object
             JsonUtility.FromJsonOverwrite(bf.Deserialize(file).ToString(), this);
             file.Close();
 
+            //if the file was private
             /*IFormatter formatter = new BinaryFormatter();
             Stream stream = new FileStream(string.Concat(Application.persistentDataPath, savePath), FileMode.Open, FileAccess.Read);
             Container = (Inventory)formatter.Deserialize(stream);
@@ -77,6 +85,7 @@ public class Inventory
     public List<InventorySlot> Items = new List<InventorySlot>();
 }
 
+//Holds information about an item in the inventory
 [System.Serializable]
 public class InventorySlot
 {

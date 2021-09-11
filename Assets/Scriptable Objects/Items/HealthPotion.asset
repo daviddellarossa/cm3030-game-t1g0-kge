@@ -9,16 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69fedf5c4aa93a24d9871cc8729fc9fc, type: 3}
-  m_Name: Health Potion
+  m_Script: {fileID: 11500000, guid: 89a7e6b5275b60a4ca923438e579e8a2, type: 3}
+  m_Name: HealthPotion
   m_EditorClassIdentifier: 
-  Id: 0
+  Id: 1
   uiDisplay: {fileID: 21300000, guid: 5df77abc350cbed478c81d043804d2fd, type: 3}
-  type: 0
-  description: Restores a great amount of health.
-  buffs:
-  - attribute: 0
-    value: 0
-    min: 10
-    max: 60
+  type: 3
+  description: 
+  buffs: []
   restoreHealthValue: 40
