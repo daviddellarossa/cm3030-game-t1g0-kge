@@ -94,7 +94,6 @@ MonoBehaviour:
   characterController: {fileID: 236575472}
   mainCamera: {fileID: 0}
   turnSmoothTime: 0.1
-  cameraRelPosition: {x: 20, y: -5, z: 0}
   health: {fileID: 4022663454374373208}
   healthBar: {fileID: 0}
 --- !u!114 &236575474
