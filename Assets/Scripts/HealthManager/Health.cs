@@ -60,4 +60,10 @@ public class Health : MonoBehaviour
     {
         ResetHealth();
     }
+
+    public void Die()
+    {
+        if (currentHealth <= 0) return;
+        TakeDamage(currentHealth);
+    }
 }

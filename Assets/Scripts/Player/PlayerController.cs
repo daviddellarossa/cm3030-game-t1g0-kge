@@ -40,6 +40,10 @@ public class PlayerController : MonoBehaviour
     public void FixedUpdate()
     {
         MovePlayer();
+        if (transform.position.y < -10)
+        {
+            health.Die();
+        }
     }
 
     public void Fire(InputAction.CallbackContext context)
@@ -53,6 +57,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log($"Move: {inputVector}");
         
         movement = new Vector3(inputVector.x, 0f, inputVector.y);
+        
     }
 
     private void MovePlayer()

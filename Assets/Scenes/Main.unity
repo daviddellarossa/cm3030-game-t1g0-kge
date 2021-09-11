@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -48462,13 +48462,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4022663454374373208, guid: 8f69b2abdd6c1fa4d9b0eede01f02540,
         type: 3}
+      propertyPath: hasDiedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4022663454374373208, guid: 8f69b2abdd6c1fa4d9b0eede01f02540,
+        type: 3}
       propertyPath: hasDiedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1261963307}
     - target: {fileID: 4022663454374373208, guid: 8f69b2abdd6c1fa4d9b0eede01f02540,
         type: 3}
       propertyPath: hasDiedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CharacterHasDied
+      value: PlayerDies
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f69b2abdd6c1fa4d9b0eede01f02540, type: 3}
