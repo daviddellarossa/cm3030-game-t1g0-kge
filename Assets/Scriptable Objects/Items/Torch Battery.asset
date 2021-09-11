@@ -16,4 +16,5 @@ MonoBehaviour:
   uiDisplay: {fileID: 21300000, guid: 8b1d97b3b60d1a94eaa783d64541a587, type: 3}
   type: 1
   description: To recharge your torch.
+  buffs: []
   batteryCharge: 50

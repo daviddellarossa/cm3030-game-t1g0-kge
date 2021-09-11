@@ -27,6 +27,7 @@ public class DisplayInventory : MonoBehaviour
         UpdateDisplay();
     }
 
+    //creates the inventory display
     public void CreateDisplay()
     {
         for (int i = 0; i < inventory.Container.Items.Count; i++)
@@ -41,11 +42,13 @@ public class DisplayInventory : MonoBehaviour
         }
     }
 
+    //get the local position
     public Vector3 GetPosition(int i)
     {
         return new Vector3(X_START + (X_SPACE_BETWEN_ITEM * (i % NUMBER_OF_COLUMNS)), Y_START + (-Y_SPACE_BETWEEN_ITEMS * (i / NUMBER_OF_COLUMNS)), 0f);
     }
 
+    //update display if inventory changes
     public void UpdateDisplay()
     {
         for (int i = 0; i < inventory.Container.Items.Count; i++)
@@ -54,10 +57,12 @@ public class DisplayInventory : MonoBehaviour
 
             if (itemsDisplayed.ContainsKey(slot))
             {
+                //update number by sprite to show amount of item
                 itemsDisplayed[slot].GetComponentInChildren<TextMeshProUGUI>().text = slot.amount.ToString("n0");
             }
             else
             {
+                //create new item
                 var obj = Instantiate(inventoryPrefab, Vector3.zero, Quaternion.identity, transform);
                 obj.transform.GetChild(0).GetComponentInChildren<Image>().sprite = inventory.database.GetItem[slot.item.Id].uiDisplay;
                 obj.GetComponent<RectTransform>().localPosition = GetPosition(i);

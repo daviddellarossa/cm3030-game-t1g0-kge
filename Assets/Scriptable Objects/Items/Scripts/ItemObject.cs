@@ -7,6 +7,7 @@ public enum ItemType
     HealthPotion,
     Battery,
     BandAid,
+    Health,
     Default
 }
 
@@ -15,6 +16,7 @@ public enum Attributes
     Health,
     BatteryCharge
 }
+
 public abstract class ItemObject : ScriptableObject
 {
     public int Id;
@@ -43,8 +45,10 @@ public class Item
         buffs = new ItemBuff[item.buffs.Length];
         for (int i = 0; i < buffs.Length; i++)
         {
-            buffs[i] = new ItemBuff(item.buffs[i].min, item.buffs[i].max);
-            buffs[i].attribute = item.buffs[i].attribute;
+            buffs[i] = new ItemBuff(item.buffs[i].min, item.buffs[i].max)
+            {
+                attribute = item.buffs[i].attribute
+            };
         }
     }
 }

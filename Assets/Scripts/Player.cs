@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     public InventoryObject inventory;
 
+    //pick up object and add to inventory
     public void OnTriggerEnter(Collider other)
     {
         var item = other.GetComponent<GroundItem>();
@@ -30,6 +31,6 @@ public class Player : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        //inventory.Container.Clear();
+        inventory.Container.Items.Clear();
     }
 }

@@ -1,19 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
-public class GroundItem : MonoBehaviour
+public class GroundItem : MonoBehaviour, ISerializationCallbackReceiver
 {
     public ItemObject item;
-    // Start is called before the first frame update
-    void Start()
+
+    public void OnAfterDeserialize()
     {
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnBeforeSerialize()
     {
-        
+        //set the sprite of the object in the world to be the same as the inventory sprite
+        GetComponentInChildren<SpriteRenderer>().sprite = item.uiDisplay;
+        EditorUtility.SetDirty(GetComponentInChildren<SpriteRenderer>());
     }
 }
