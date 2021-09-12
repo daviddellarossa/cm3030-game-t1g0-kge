@@ -23,10 +23,6 @@ public class PlayerController : MonoBehaviour
 
     public InventoryObject inventory;
 
-    //if battery picked up
-    [SerializeField] float restorationAngle = 80f;
-    [SerializeField] float additiveIntensity = 2.5f;
-
     private void Awake()
     {
         if (health != null && healthBar != null)
@@ -66,11 +62,6 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Pressed Key3");
             CheckItemExists(3);
         }
-        if (Keyboard.current.digit3Key.wasPressedThisFrame)
-        {
-            Debug.Log("Pressed Key4");
-            CheckItemExists(4);
-        }
     }
 
     private void CheckItemExists(int keyNumber)
@@ -94,25 +85,18 @@ public class PlayerController : MonoBehaviour
         if (itemID == 0)
         {
             Debug.Log("This is a BandAid");
-            RestoreHealth(10);
             inventory.updateUsedItem(slot);
+            RestoreHealth(10);
         }
         if (itemID == 1)
         {
             Debug.Log("This is a Health Potion");
-            RestoreHealth(40);
             inventory.updateUsedItem(slot);
+            RestoreHealth(40);
         }
         if (itemID == 2)
         {
             Debug.Log("This is a key.");
-            inventory.updateUsedItem(slot);
-        }
-        if (itemID == 3)
-        {
-            Debug.Log("This is a battery.");
-            this.GetComponentInChildren<Flashlight_System>().RestoreLightAngle(restorationAngle);
-            this.GetComponentInChildren<Flashlight_System>().RestoreLightIntensity(additiveIntensity);
             inventory.updateUsedItem(slot);
         }
     }
