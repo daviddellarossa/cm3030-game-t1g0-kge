@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Serialization;
+using UnityEngine.InputSystem;
 
 public class EnemyController : MonoBehaviour
 {
@@ -23,6 +24,36 @@ public class EnemyController : MonoBehaviour
     [FormerlySerializedAs("EnemySightRange")] public float sightRange = 4.0f;
     public float attackRange;
     public bool playerInSightRange, playerInAttackRange;
+    
+    // Health management
+    [SerializeField] private Health health;
+    [SerializeField] private HealthBar healthBar;
+    
+    private void Awake()
+    {
+        if (health != null && healthBar != null)
+        {
+            health.setHealthEvent += (sender, i) =>
+            {
+                healthBar.SetHealth(i);
+            };
+
+            health.setMaxHealthEvent += (sender, i) =>
+            {
+                healthBar.SetMaxHealth(i);
+            };
+        }
+    }
+    
+    public void TakeDamageAction(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log("Damage taken");
+            
+            gameObject.GetComponent<Health>().TakeDamage(20);
+        }
+    }
     
     // Start is called before the first frame update
     void Start()
