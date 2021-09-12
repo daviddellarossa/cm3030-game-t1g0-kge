@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Alter : MonoBehaviour
+public class InvisComponents : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,10 +14,5 @@ public class Alter : MonoBehaviour
     void Update()
     {
         
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log(collision.gameObject.tag);
     }
 }
