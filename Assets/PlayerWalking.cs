@@ -16,14 +16,14 @@ public class PlayerWalking : StateMachineBehaviour
     {
         if (Keyboard.current.sKey.isPressed || Keyboard.current.dKey.isPressed || Keyboard.current.aKey.isPressed || Keyboard.current.wKey.isPressed)
         {
-            animator.SetBool("IsMoving", true);
+            animator.SetBool("isMoving", true);
         }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.SetBool("IsMoving", false);
+        animator.SetBool("isMoving", false);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
