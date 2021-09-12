@@ -28,8 +28,6 @@ public class GameOrchestrator : MonoBehaviour
     public void PlayerDies()
     {
         Debug.Log("Player dies");
-        //sDestroy(player);
-        
         Invoke(nameof(RespawnPlayer), 2);
     }
 
@@ -37,7 +35,6 @@ public class GameOrchestrator : MonoBehaviour
     {
         Debug.Log("Respawning Player");
         SceneManager.LoadScene("Scenes/Main");
-        //player = GameObject.Instantiate(player);
     }
 
     public void CharacterHasDied(GameObject gameObject)
