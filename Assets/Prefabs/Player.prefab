@@ -211,7 +211,7 @@ MonoBehaviour:
     m_ActionName: Player/Damage Foe[/Keyboard/f]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8939302617054967571}
         m_MethodName: makeInvisible
         m_Mode: 1
         m_Arguments:

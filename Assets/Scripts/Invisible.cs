@@ -28,15 +28,14 @@ public class Invisible : MonoBehaviour
 
     public void makeInvisible(/*InputAction.CallbackContext context*/)
     {
-        Debug.Log("invs");
+        Debug.Log(rend.Length);
 
         if (!isInvis) {
             foreach (var r in rend)
             {
+                Debug.Log(r.materials[1]);
                 r.sharedMaterial = material[1];
             }
-      
-            Debug.Log("inside the if");
             isInvis = !isInvis;
             Invoke(nameof(makeVisible), 5.0f);
         }
@@ -46,7 +45,6 @@ public class Invisible : MonoBehaviour
 
     public void makeVisible()
     {
-        Debug.Log("inside make vis");
         foreach (var r in rend)
         {
             r.sharedMaterial = material[0];
