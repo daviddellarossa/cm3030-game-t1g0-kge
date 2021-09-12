@@ -34,6 +34,13 @@ public class InventoryObject : ScriptableObject
         Container.Items.Add(new InventorySlot(_item.Id, _item, _amount));
     }
 
+    //update to decrease the amount of item
+    public void updateUsedItem(InventorySlot slot)
+    {
+        if (slot.amount > 0)
+            slot.amount -= 1;
+    }
+
     [ContextMenu("Save")]
     public void Save()
     {

@@ -17,4 +17,4 @@ MonoBehaviour:
   type: 3
   description: 
   buffs: []
-  restoreHealthValue: 14
+  restoreHealthValue: 10

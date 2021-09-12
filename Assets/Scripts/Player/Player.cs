@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
@@ -16,18 +17,6 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
-
-    /*private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            inventory.Save();
-        }
-        if (Input.GetKeyDown(KeyCode.KeypadEnter))
-        {
-            inventory.Load();
-        }
-    }*/
 
     private void OnApplicationQuit()
     {
