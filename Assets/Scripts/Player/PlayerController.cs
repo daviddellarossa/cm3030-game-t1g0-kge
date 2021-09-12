@@ -23,6 +23,9 @@ public class PlayerController : MonoBehaviour
 
     public InventoryObject inventory;
 
+    [SerializeField] float restorationAngle = 80f;
+    [SerializeField] float additiveIntensity = 2.5f;
+
     private void Awake()
     {
         if (health != null && healthBar != null)
@@ -98,6 +101,13 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("This is a key.");
             inventory.updateUsedItem(slot);
+        }
+        if (itemID == 3)
+        {
+            Debug.Log("This is a battery.");
+            inventory.updateUsedItem(slot);
+            this.GetComponentInChildren<Flashlight_System>().RestoreLightAngle(restorationAngle);
+            this.GetComponentInChildren<Flashlight_System>().RestoreLightIntensity(additiveIntensity);
         }
     }
 
