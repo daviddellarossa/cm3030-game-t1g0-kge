@@ -15,6 +15,6 @@ public class GroundItem : MonoBehaviour, ISerializationCallbackReceiver
     {
         //set the sprite of the object in the world to be the same as the inventory sprite
         GetComponentInChildren<SpriteRenderer>().sprite = item.uiDisplay;
-        EditorUtility.SetDirty(GetComponentInChildren<SpriteRenderer>());
+        //EditorUtility.SetDirty(GetComponentInChildren<SpriteRenderer>());
     }
 }
