@@ -69,14 +69,17 @@ public class PlayerController : MonoBehaviour
 
     private void CheckItemExists(int keyNumber)
     {
-        InventorySlot slot = inventory.Container.Items[keyNumber - 1];
-        //get the total amount of items in the inventory
-        int itemCount = inventory.Container.Items.Count;
-        if (slot.amount > 0 && itemCount > 0)
+        if (inventory.Container.Items.Count > 0)
         {
-            //use item
-            Debug.Log("Item exists");
-            UseItem(slot);
+            InventorySlot slot = inventory.Container.Items[keyNumber - 1];
+            //get the total amount of items in the inventory
+            int itemCount = inventory.Container.Items.Count;
+            if (slot.amount > 0 && itemCount > 0)
+            {
+                //use item
+                Debug.Log("Item exists");
+                UseItem(slot);
+            }
         }
     }
 
