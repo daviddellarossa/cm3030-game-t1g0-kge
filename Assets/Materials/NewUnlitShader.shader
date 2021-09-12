@@ -3,7 +3,7 @@
     Properties
     {
         _Color ( "Color", Color ) = (1, 1, 1, 0)
-        _MainTex ("Texture", 2D) = "white" {}
+        _Gloss ( "Gloss", Float ) = 1
     }
     SubShader
     {
@@ -15,7 +15,6 @@
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-            // make fog work
             #pragma multi_compile_fog
 
             #include "UnityCG.cginc"
@@ -38,42 +37,48 @@
                 float3 worldPos : TEXCOOD2;
             };
 
-            sampler2D _MainTex;
-            float4 _MainTex_ST;
             float4 _Color;
+            float _Gloss;
+            
 
             v2f vert (appdata v)
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
                 o.normal = v.normal;
                 o.worldPos = mul(unity_ObjectToWorld, v.vertex);
-                UNITY_TRANSFER_FOG(o,o.vertex);
                 return o;
             }
 
             fixed4 frag (v2f i) : SV_Target
             {
+                float3 normal = normalize(i.normal);
 
-                return float4( i.worldPos, 1);
+                // Lighting
+                float3 lightDir = _WorldSpaceLightPos0.xyz; // the light direction
+                float3 lightColor = _LightColor0.rgb;
+                
+                // Ambient Light
+                float3 ambientLight = float3(0.2, 0.2, 0.2);
+                
+                // Direct diffuse light
+                float diffuseFalloff = max(0, dot( lightDir, i.normal)); // the dot product between the light and the normal, minimum 0
+                float3 directDiffuseLight = lightColor * diffuseFalloff; // multiplied by the color (assuming intensity is 1)
 
-                // sample the texture
-                fixed4 col = tex2D(_MainTex, i.uv);
-                // apply fog
-                UNITY_APPLY_FOG(i.fogCoord, col);
-                // return col;
-                
-                // float2 uv = i.uv;
-                // float3 normal = i.normal * 0.5 + 0.5;
-                // return float4(normal, 0);
-                
-                float3 lightDir = _WorldSpaceLightPos0.xyz;
-                float lightFallOff = max(0, dot( lightDir, i.normal));
-                float3 simpleLight = _Color.rgb * lightFallOff;
-                
+                // Direct specular light
+                float3 camPos = _WorldSpaceCameraPos;
+                float3 fragToCam = camPos - i.worldPos;
+                float3 viewDir = normalize(fragToCam);
+                float3 viewReflect = reflect(-viewDir, normal);
+                float specularFalloff = max(0, dot(viewReflect, lightDir));
+                specularFalloff = pow(specularFalloff, _Gloss);
+                float3 directSpecularLight = lightColor * specularFalloff;
 
-                return float4( simpleLight, 0);
+                // Composite
+                // float3 finalColor = (ambientLight + directDiffuseLight) * _Color.rgb + directSpecularLight;
+                float3 finalColor = (ambientLight + directDiffuseLight) * _Color.rgb;
+
+                return float4(finalColor, 0);
             }
             ENDCG
         }

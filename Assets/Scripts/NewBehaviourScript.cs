@@ -16,10 +16,10 @@ public class NewBehaviourScript : MonoBehaviour
 
     private Vector3 _moveDirection;
 
-    //[SerializeField] private Health health;
-    //[SerializeField] private HealthBar healthBar;
+    [SerializeField] private Health health;
+    [SerializeField] private HealthBar healthBar;
 
-    /*private void Awake()
+    private void Awake()
     {
         if (health != null && healthBar != null)
         {
@@ -33,7 +33,7 @@ public class NewBehaviourScript : MonoBehaviour
                 healthBar.SetMaxHealth(i);
             };
         }
-    }*/
+    }
 
     public void FixedUpdate()
     {
@@ -94,7 +94,7 @@ public class NewBehaviourScript : MonoBehaviour
         cameraTransform.LookAt(playerTransform);
 
     }
-    /*public void TakeDamageAction(InputAction.CallbackContext context)
+    public void TakeDamageAction(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
@@ -102,5 +102,5 @@ public class NewBehaviourScript : MonoBehaviour
 
             gameObject.GetComponent<Health>().TakeDamage(20);
         }
-    }*/
+    }
 }

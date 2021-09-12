@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]private Health health;
     [SerializeField] private HealthBar healthBar;
-    
+
     private void Awake()
     {
         if (health != null && healthBar != null)
