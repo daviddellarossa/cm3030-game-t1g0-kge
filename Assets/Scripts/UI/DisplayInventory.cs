@@ -71,4 +71,25 @@ public class DisplayInventory : MonoBehaviour
             }
         }
     }
+
+    //use the item in an inventory slot
+    public void UseItem(Item item, int amount)
+    {
+        if (item.Id == 0)
+        {
+            Debug.Log("This is a BandAid");
+            Debug.Log("Amount: " + amount);
+            amount -= 1;
+            Debug.Log("Amount: " + amount);
+
+        }
+        if (item.Id == 1)
+        {
+            Debug.Log("This is a Health Potion");
+        }
+        if (item.Id == 2)
+        {
+            Debug.Log("This is a key.");
+        }
+    }
 }
