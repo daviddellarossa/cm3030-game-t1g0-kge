@@ -11,9 +11,6 @@ using UnityEngine.Serialization;
 [Serializable]
 public class CharacterEvent: UnityEvent<GameObject>{}
 
-
-
-
 public class Health : MonoBehaviour
 {
     public int maxHealth;
@@ -28,7 +25,7 @@ public class Health : MonoBehaviour
     public event EventHandler<int> setMaxHealthEvent;
 
     //public event EventHandler hasDiedEvent;
-    
+
     public void ResetHealth()
     {
         currentHealth = maxHealth;
@@ -54,7 +51,16 @@ public class Health : MonoBehaviour
             //hasDiedEvent?.Invoke(gameObject, new EventArgs()); 
         }
     }
-    
+
+    //restore health function
+    public void RestoreHealth(int restoreAmount)
+    {
+        currentHealth += restoreAmount;
+
+        // setHealthEvent?.Invoke(currentHealth, gameObject);
+        setHealthEvent?.Invoke(gameObject, currentHealth);
+    }
+
     // Start is called before the first frame update
     void Start()
     {

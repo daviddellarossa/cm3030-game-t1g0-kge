@@ -21,6 +21,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField]private Health health;
     [SerializeField] private HealthBar healthBar;
 
+    public InventoryObject inventory;
+
+    [SerializeField] float restorationAngle = 80f;
+    [SerializeField] float additiveIntensity = 2.5f;
+
     private void Awake()
     {
         if (health != null && healthBar != null)
@@ -43,6 +48,66 @@ public class PlayerController : MonoBehaviour
         if (transform.position.y < -10)
         {
             health.Die();
+        }
+
+        if (Keyboard.current.digit1Key.wasPressedThisFrame)
+        {
+            Debug.Log("Pressed Key1");
+            CheckItemExists(1);
+        }
+        if (Keyboard.current.digit2Key.wasPressedThisFrame)
+        {
+            Debug.Log("Pressed Key2");
+            CheckItemExists(2);
+        }
+        if (Keyboard.current.digit3Key.wasPressedThisFrame)
+        {
+            Debug.Log("Pressed Key3");
+            CheckItemExists(3);
+        }
+    }
+
+    private void CheckItemExists(int keyNumber)
+    {
+        InventorySlot slot = inventory.Container.Items[keyNumber - 1];
+        //get the total amount of items in the inventory
+        int itemCount = inventory.Container.Items.Count;
+        if (slot.amount > 0 && itemCount > 0)
+        {
+            //use item
+            Debug.Log("Item exists");
+            UseItem(slot);
+        }
+    }
+
+    //use the item in the inventory slot
+    private void UseItem(InventorySlot slot)
+    {
+        //get the id of the item located in that slot
+        int itemID = slot.item.Id;
+        if (itemID == 0)
+        {
+            Debug.Log("This is a BandAid");
+            inventory.updateUsedItem(slot);
+            RestoreHealth(10);
+        }
+        if (itemID == 1)
+        {
+            Debug.Log("This is a Health Potion");
+            inventory.updateUsedItem(slot);
+            RestoreHealth(40);
+        }
+        if (itemID == 2)
+        {
+            Debug.Log("This is a key.");
+            inventory.updateUsedItem(slot);
+        }
+        if (itemID == 3)
+        {
+            Debug.Log("This is a battery.");
+            inventory.updateUsedItem(slot);
+            this.GetComponentInChildren<Flashlight_System>().RestoreLightAngle(restorationAngle);
+            this.GetComponentInChildren<Flashlight_System>().RestoreLightIntensity(additiveIntensity);
         }
     }
 
@@ -113,5 +178,11 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health.TakeDamage(damage);
+    }
+
+    //restore health
+    public void RestoreHealth(int amountToRestore)
+    {
+        health.RestoreHealth(amountToRestore);
     }
 }

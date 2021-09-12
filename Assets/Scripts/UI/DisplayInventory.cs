@@ -37,7 +37,8 @@ public class DisplayInventory : MonoBehaviour
             var obj = Instantiate(inventoryPrefab, Vector3.zero, Quaternion.identity, transform);
             obj.transform.GetChild(0).GetComponentInChildren<Image>().sprite = inventory.database.GetItem[slot.item.Id].uiDisplay;
             obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
-            obj.GetComponentInChildren<TextMeshProUGUI>().text = slot.amount.ToString("n0");
+            obj.GetComponentsInChildren<TextMeshProUGUI>()[0].text = slot.amount.ToString("n0");
+            obj.GetComponentsInChildren<TextMeshProUGUI>()[1].text = (i + 1).ToString("n0");
             itemsDisplayed.Add(slot, obj);
         }
     }
@@ -58,7 +59,7 @@ public class DisplayInventory : MonoBehaviour
             if (itemsDisplayed.ContainsKey(slot))
             {
                 //update number by sprite to show amount of item
-                itemsDisplayed[slot].GetComponentInChildren<TextMeshProUGUI>().text = slot.amount.ToString("n0");
+                itemsDisplayed[slot].GetComponentsInChildren<TextMeshProUGUI>()[0].text = slot.amount.ToString("n0");
             }
             else
             {
@@ -66,9 +67,31 @@ public class DisplayInventory : MonoBehaviour
                 var obj = Instantiate(inventoryPrefab, Vector3.zero, Quaternion.identity, transform);
                 obj.transform.GetChild(0).GetComponentInChildren<Image>().sprite = inventory.database.GetItem[slot.item.Id].uiDisplay;
                 obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
-                obj.GetComponentInChildren<TextMeshProUGUI>().text = inventory.Container.Items[i].amount.ToString("n0");
+                obj.GetComponentsInChildren<TextMeshProUGUI>()[0].text = inventory.Container.Items[i].amount.ToString("n0");
+                obj.GetComponentsInChildren<TextMeshProUGUI>()[1].text = (i + 1).ToString("n0");
                 itemsDisplayed.Add(inventory.Container.Items[i], obj);
             }
+        }
+    }
+
+    //use the item in an inventory slot
+    public void UseItem(Item item, int amount)
+    {
+        if (item.Id == 0)
+        {
+            Debug.Log("This is a BandAid");
+            Debug.Log("Amount: " + amount);
+            amount -= 1;
+            Debug.Log("Amount: " + amount);
+
+        }
+        if (item.Id == 1)
+        {
+            Debug.Log("This is a Health Potion");
+        }
+        if (item.Id == 2)
+        {
+            Debug.Log("This is a key.");
         }
     }
 }
