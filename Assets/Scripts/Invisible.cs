@@ -48,7 +48,7 @@ public class Invisible : MonoBehaviour
     {
         foreach (var r in rend)
         {
-            r.sharedMaterial = material[0];
+            r.sharedMaterial = r.materials[0];
         }
         isInvis = false;
     }
