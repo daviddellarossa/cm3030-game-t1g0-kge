@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/MainMenu.unity
+    guid: 1cc9ddaf4e7a49649b471441f96c40e6
   - enabled: 1
-    path: Assets/Scenes/Main.unity
-    guid: 0d4a27aeccfad9e41be66dd2eac815a8
+    path: Assets/Scenes/GraveyardMap.unity
+    guid: 1336b13d371e73243aad825115eb3d10
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 34ad6819c20914a46acf00576534d58d,
       type: 2}
