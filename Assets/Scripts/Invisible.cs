@@ -33,7 +33,7 @@ public class Invisible : MonoBehaviour
         if (!isInvis) {
             foreach (var r in rend)
             {
-                r.sharedMaterial = material[1];
+                r.sharedMaterial = r.materials[1];
             }
       
             Debug.Log("inside the if");
