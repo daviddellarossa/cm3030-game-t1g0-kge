@@ -423,7 +423,7 @@ PrefabInstance:
     - target: {fileID: 392730441218767886, guid: 0bcdaabe72e82944aad9e655f38f4ed5,
         type: 3}
       propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 392730441218767886, guid: 0bcdaabe72e82944aad9e655f38f4ed5,
         type: 3}
@@ -442,11 +442,6 @@ PrefabInstance:
       objectReference: {fileID: 729071650}
     - target: {fileID: 392730441218767886, guid: 0bcdaabe72e82944aad9e655f38f4ed5,
         type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 729071652}
-    - target: {fileID: 392730441218767886, guid: 0bcdaabe72e82944aad9e655f38f4ed5,
-        type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: 
       objectReference: {fileID: 0}
@@ -459,16 +454,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TakeDamageAction
-      objectReference: {fileID: 0}
-    - target: {fileID: 392730441218767886, guid: 0bcdaabe72e82944aad9e655f38f4ed5,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: makeInvisible
-      objectReference: {fileID: 0}
-    - target: {fileID: 392730441218767886, guid: 0bcdaabe72e82944aad9e655f38f4ed5,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2164360381219329065, guid: 0bcdaabe72e82944aad9e655f38f4ed5,
         type: 3}
@@ -595,11 +580,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.036
       objectReference: {fileID: 0}
-    - target: {fileID: 5917677855659732322, guid: 0bcdaabe72e82944aad9e655f38f4ed5,
-        type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7c8a546745de9544fa71f5788ffac1e2, type: 2}
     - target: {fileID: 5917677855659732324, guid: 0bcdaabe72e82944aad9e655f38f4ed5,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -650,16 +630,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.212
       objectReference: {fileID: 0}
-    - target: {fileID: 5917677856760622353, guid: 0bcdaabe72e82944aad9e655f38f4ed5,
-        type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5917677856760622353, guid: 0bcdaabe72e82944aad9e655f38f4ed5,
-        type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7c8a546745de9544fa71f5788ffac1e2, type: 2}
     - target: {fileID: 5917677856760622355, guid: 0bcdaabe72e82944aad9e655f38f4ed5,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -690,20 +660,7 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.029
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3146388021537271378, guid: 0bcdaabe72e82944aad9e655f38f4ed5, type: 3}
-    - {fileID: 2096425990417509538, guid: 0bcdaabe72e82944aad9e655f38f4ed5, type: 3}
-    - {fileID: 5780792476508724458, guid: 0bcdaabe72e82944aad9e655f38f4ed5, type: 3}
-    - {fileID: 5303694188683163131, guid: 0bcdaabe72e82944aad9e655f38f4ed5, type: 3}
-    - {fileID: 3744165974686181332, guid: 0bcdaabe72e82944aad9e655f38f4ed5, type: 3}
-    - {fileID: 546126588941113911, guid: 0bcdaabe72e82944aad9e655f38f4ed5, type: 3}
-    - {fileID: 1932984661728703988, guid: 0bcdaabe72e82944aad9e655f38f4ed5, type: 3}
-    - {fileID: 5080619392210563063, guid: 0bcdaabe72e82944aad9e655f38f4ed5, type: 3}
-    - {fileID: 245854518841616046, guid: 0bcdaabe72e82944aad9e655f38f4ed5, type: 3}
-    - {fileID: 1238672651110692522, guid: 0bcdaabe72e82944aad9e655f38f4ed5, type: 3}
-    - {fileID: 6827996984115635097, guid: 0bcdaabe72e82944aad9e655f38f4ed5, type: 3}
-    - {fileID: 2219997038527281937, guid: 0bcdaabe72e82944aad9e655f38f4ed5, type: 3}
-    - {fileID: 8845103807757547063, guid: 0bcdaabe72e82944aad9e655f38f4ed5, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bcdaabe72e82944aad9e655f38f4ed5, type: 3}
 --- !u!1001 &6584816
 PrefabInstance:
@@ -8190,16 +8147,17 @@ PrefabInstance:
     - target: {fileID: 1109254911645382991, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99767154
+      value: 0.99767137
       objectReference: {fileID: 0}
     - target: {fileID: 1109254911645382991, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.06820193
+      value: 0.06820192
       objectReference: {fileID: 0}
     - target: {fileID: 1109254911645382991, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
       propertyPath: m_LocalRotation.y
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8213,10 +8171,14 @@ PrefabInstance:
 =======
       value: 0.00021484788
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
+=======
+      value: 0.00058398815
+>>>>>>> parent of 7d75028 (Invisibility bug fix)
       objectReference: {fileID: 0}
     - target: {fileID: 1109254911645382991, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
       propertyPath: m_LocalRotation.z
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8230,6 +8192,9 @@ PrefabInstance:
 =======
       value: -0.000014687261
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
+=======
+      value: -0.000039918432
+>>>>>>> parent of 7d75028 (Invisibility bug fix)
       objectReference: {fileID: 0}
     - target: {fileID: 1109254911692636867, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
@@ -8249,16 +8214,17 @@ PrefabInstance:
     - target: {fileID: 1109254911692636867, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9884466
+      value: 0.9884465
       objectReference: {fileID: 0}
     - target: {fileID: 1109254911692636867, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.15156862
+      value: -0.1515686
       objectReference: {fileID: 0}
     - target: {fileID: 1109254911692636867, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
       propertyPath: m_LocalRotation.y
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8272,10 +8238,14 @@ PrefabInstance:
 =======
       value: -0.00065351784
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
+=======
+      value: -0.00074488076
+>>>>>>> parent of 7d75028 (Invisibility bug fix)
       objectReference: {fileID: 0}
     - target: {fileID: 1109254911692636867, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
       propertyPath: m_LocalRotation.z
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8289,6 +8259,9 @@ PrefabInstance:
 =======
       value: -0.00010021104
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
+=======
+      value: -0.00011421575
+>>>>>>> parent of 7d75028 (Invisibility bug fix)
       objectReference: {fileID: 0}
     - target: {fileID: 1109254911694180888, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
@@ -8316,6 +8289,7 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0.70229703
 =======
       value: 0.70199656
@@ -8326,10 +8300,14 @@ PrefabInstance:
 =======
       value: 0.70199656
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
+=======
+      value: 0.7017364
+>>>>>>> parent of 7d75028 (Invisibility bug fix)
       objectReference: {fileID: 0}
     - target: {fileID: 1109254911694180888, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
       propertyPath: m_LocalRotation.x
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8343,10 +8321,14 @@ PrefabInstance:
 =======
       value: -0.080620795
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
+=======
+      value: -0.08059091
+>>>>>>> parent of 7d75028 (Invisibility bug fix)
       objectReference: {fileID: 0}
     - target: {fileID: 1109254911694180888, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
       propertyPath: m_LocalRotation.y
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8360,10 +8342,14 @@ PrefabInstance:
 =======
       value: -0.7029817
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
+=======
+      value: -0.7032414
+>>>>>>> parent of 7d75028 (Invisibility bug fix)
       objectReference: {fileID: 0}
     - target: {fileID: 1109254911694180888, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
       propertyPath: m_LocalRotation.z
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8377,6 +8363,9 @@ PrefabInstance:
 =======
       value: -0.08073393
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
+=======
+      value: -0.08076376
+>>>>>>> parent of 7d75028 (Invisibility bug fix)
       objectReference: {fileID: 0}
     - target: {fileID: 1109254911694180888, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
@@ -8416,11 +8405,12 @@ PrefabInstance:
     - target: {fileID: 1109254913439866490, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9992232
+      value: 0.99922305
       objectReference: {fileID: 0}
     - target: {fileID: 1109254913439866490, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
       propertyPath: m_LocalRotation.x
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8434,10 +8424,14 @@ PrefabInstance:
 =======
       value: 0.039409194
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
+=======
+      value: 0.039409187
+>>>>>>> parent of 7d75028 (Invisibility bug fix)
       objectReference: {fileID: 0}
     - target: {fileID: 1109254913439866490, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
       propertyPath: m_LocalRotation.y
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8451,10 +8445,14 @@ PrefabInstance:
 =======
       value: 0.00021521264
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
+=======
+      value: 0.000584976
+>>>>>>> parent of 7d75028 (Invisibility bug fix)
       objectReference: {fileID: 0}
     - target: {fileID: 1109254913439866490, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
       propertyPath: m_LocalRotation.z
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8468,6 +8466,9 @@ PrefabInstance:
 =======
       value: -0.0000084880585
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
+=======
+      value: -0.00002307018
+>>>>>>> parent of 7d75028 (Invisibility bug fix)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72892efc0c8b6cb46b8ddfa012ca00f3, type: 3}
@@ -27361,18 +27362,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97f60b60cde36a741ba6e698e25e6655, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &729071652 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8939302617054967571, guid: 0bcdaabe72e82944aad9e655f38f4ed5,
-    type: 3}
-  m_PrefabInstance: {fileID: 6270610}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 729071646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b745165f66072404b8abc62151fe2326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &729071652 stripped
