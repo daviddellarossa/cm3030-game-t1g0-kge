@@ -9,6 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2646790701430197861}
+<<<<<<< HEAD
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+=======
   - component: {fileID: 236575472}
   - component: {fileID: 236575470}
   - component: {fileID: 236575471}
@@ -17,6 +22,7 @@ GameObject:
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
+>>>>>>> origin/main
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
