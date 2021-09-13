@@ -17,8 +17,8 @@ GameObject:
   - component: {fileID: 236575472}
   - component: {fileID: 236575470}
   - component: {fileID: 236575471}
+  - component: {fileID: 236575473}
   - component: {fileID: 236575474}
-  - component: {fileID: 4022663454374373208}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -40,7 +40,6 @@ Transform:
   m_Children:
   - {fileID: 2646790701694758704}
   - {fileID: 2646790702714946855}
-  - {fileID: 7295114065344482447}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -100,8 +99,36 @@ MonoBehaviour:
   characterController: {fileID: 236575472}
   mainCamera: {fileID: 0}
   turnSmoothTime: 0.1
-  health: {fileID: 4022663454374373208}
+  cameraRelPosition: {x: 20, y: -5, z: 0}
+--- !u!114 &236575473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2646790701430197862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed9b898d0fb5e794ba38fc3546074bb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 100
   healthBar: {fileID: 0}
+  PlayerIsDead:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: PlayerDies
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &236575474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,28 +231,25 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 236575471}
+      - m_Target: {fileID: 236575473}
         m_MethodName: TakeDamageAction
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 20
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: de681493-6976-46f4-9825-1a39159f48c0
     m_ActionName: Player/Take damage[/Keyboard/space]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a6533672-2f44-455a-b731-8e2636868994
-    m_ActionName: Player/Damage Foe[/Keyboard/f]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+<<<<<<< HEAD
 --- !u!114 &4022663454374373208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,6 +278,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+=======
+>>>>>>> origin/main
+>>>>>>> parent of 5a1356a (fix conflicts)
 --- !u!1 &2646790701694758705
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,12 +454,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
 --- !u!1 &6910238345498711566
 GameObject:
+=======
+<<<<<<< HEAD
+--- !u!136 &2646790702714946854
+CapsuleCollider:
+>>>>>>> parent of 5a1356a (fix conflicts)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7295114065344482447}
@@ -533,3 +567,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7542003294057977623}
   m_PrefabAsset: {fileID: 0}
+=======
+  m_GameObject: {fileID: 2646790702714946848}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> origin/main
+>>>>>>> parent of 5a1356a (fix conflicts)
