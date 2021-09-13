@@ -38,8 +38,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!143 &236575472
 CharacterController:
   m_ObjectHideFlags: 0
@@ -222,9 +220,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
 --- !u!114 &4022663454374373208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,7 +248,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
->>>>>>> da1ec7169f352596c12c1d4c5108002e2d46041e
 --- !u!1 &2646790701694758705
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,11 +260,7 @@ GameObject:
   - component: {fileID: 2646790701694758709}
   - component: {fileID: 2646790701694758710}
   - component: {fileID: 2646790701694758711}
-<<<<<<< HEAD
-  m_Layer: 0
-=======
   m_Layer: 8
->>>>>>> origin/main
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,12 +353,7 @@ GameObject:
   - component: {fileID: 2646790702714946855}
   - component: {fileID: 2646790702714946852}
   - component: {fileID: 2646790702714946853}
-<<<<<<< HEAD
-  - component: {fileID: 2646790702714946854}
-  m_Layer: 0
-=======
   m_Layer: 8
->>>>>>> origin/main
   m_Name: Nose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,30 +421,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
---- !u!136 &2646790702714946854
-CapsuleCollider:
-=======
 --- !u!1 &6910238345498711566
 GameObject:
->>>>>>> da1ec7169f352596c12c1d4c5108002e2d46041e
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 2646790702714946848}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
-=======
->>>>>>> origin/main
-=======
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7295114065344482447}
@@ -560,4 +527,3 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7542003294057977623}
   m_PrefabAsset: {fileID: 0}
->>>>>>> da1ec7169f352596c12c1d4c5108002e2d46041e
