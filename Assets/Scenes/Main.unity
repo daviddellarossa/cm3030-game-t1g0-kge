@@ -8202,7 +8202,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -0.00021173694
+=======
+      value: 0.00021484788
+>>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
 =======
       value: 0.00021484788
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
@@ -8215,7 +8219,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0.00001447881
+=======
+      value: -0.000014687261
+>>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
 =======
       value: -0.000014687261
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
@@ -8253,7 +8261,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -0.00054780266
+=======
+      value: -0.00065351784
+>>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
 =======
       value: -0.00065351784
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
@@ -8266,7 +8278,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -0.0000840036
+=======
+      value: -0.00010021104
+>>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
 =======
       value: -0.00010021104
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
@@ -8299,7 +8315,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0.70229703
+=======
+      value: 0.70199656
+>>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
 =======
       value: 0.70199656
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
@@ -8312,7 +8332,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.x
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -0.0806553
+=======
+      value: -0.080620795
+>>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
 =======
       value: -0.080620795
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
@@ -8325,7 +8349,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -0.7026815
+=======
+      value: -0.7029817
+>>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
 =======
       value: -0.7029817
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
@@ -8338,7 +8366,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -0.08069945
+=======
+      value: -0.08073393
+>>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
 =======
       value: -0.08073393
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
@@ -8391,7 +8423,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.x
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0.039409187
+=======
+      value: 0.039409194
+>>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
 =======
       value: 0.039409194
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
@@ -8404,7 +8440,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -0.00021200589
+=======
+      value: 0.00021521264
+>>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
 =======
       value: 0.00021521264
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
@@ -8417,7 +8457,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0.000008369006
+=======
+      value: -0.0000084880585
+>>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
 =======
       value: -0.0000084880585
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
@@ -27317,6 +27361,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97f60b60cde36a741ba6e698e25e6655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &729071652 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8939302617054967571, guid: 0bcdaabe72e82944aad9e655f38f4ed5,
+    type: 3}
+  m_PrefabInstance: {fileID: 6270610}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729071646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b745165f66072404b8abc62151fe2326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &729071652 stripped
