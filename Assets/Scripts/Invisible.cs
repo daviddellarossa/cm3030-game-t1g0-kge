@@ -19,6 +19,7 @@ public class Invisible : MonoBehaviour
         {
             r.enabled = true;
             r.sharedMaterial = r.materials[0];
+            
         }
         
         
@@ -33,8 +34,8 @@ public class Invisible : MonoBehaviour
         if (!isInvis) {
             foreach (var r in rend)
             {
-                Debug.Log(r.materials[1]);
-                r.sharedMaterial = material[1];
+                Debug.Log("1");
+                r.sharedMaterial = r.materials[1];
             }
             isInvis = !isInvis;
             Invoke(nameof(makeVisible), 5.0f);
