@@ -49,7 +49,7 @@ public class Invisible : MonoBehaviour
         Debug.Log("inside make vis");
         foreach (var r in rend)
         {
-            r.sharedMaterial = material[0];
+            r.sharedMaterial = r.materials[0];
         }
         isInvis = false;
     }
