@@ -8161,6 +8161,7 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -0.00021173694
 =======
       value: 0.00021484788
@@ -8174,10 +8175,14 @@ PrefabInstance:
 =======
       value: 0.00058398815
 >>>>>>> parent of 7d75028 (Invisibility bug fix)
+=======
+      value: 0.00058398815
+>>>>>>> parent of 7d75028 (Invisibility bug fix)
       objectReference: {fileID: 0}
     - target: {fileID: 1109254911645382991, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
       propertyPath: m_LocalRotation.z
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8192,6 +8197,9 @@ PrefabInstance:
 =======
       value: -0.000014687261
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
+=======
+      value: -0.000039918432
+>>>>>>> parent of 7d75028 (Invisibility bug fix)
 =======
       value: -0.000039918432
 >>>>>>> parent of 7d75028 (Invisibility bug fix)
@@ -8228,6 +8236,7 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -0.00054780266
 =======
       value: -0.00065351784
@@ -8241,10 +8250,14 @@ PrefabInstance:
 =======
       value: -0.00074488076
 >>>>>>> parent of 7d75028 (Invisibility bug fix)
+=======
+      value: -0.00074488076
+>>>>>>> parent of 7d75028 (Invisibility bug fix)
       objectReference: {fileID: 0}
     - target: {fileID: 1109254911692636867, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
       propertyPath: m_LocalRotation.z
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8259,6 +8272,9 @@ PrefabInstance:
 =======
       value: -0.00010021104
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
+=======
+      value: -0.00011421575
+>>>>>>> parent of 7d75028 (Invisibility bug fix)
 =======
       value: -0.00011421575
 >>>>>>> parent of 7d75028 (Invisibility bug fix)
@@ -8290,6 +8306,7 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0.70229703
 =======
       value: 0.70199656
@@ -8303,10 +8320,14 @@ PrefabInstance:
 =======
       value: 0.7017364
 >>>>>>> parent of 7d75028 (Invisibility bug fix)
+=======
+      value: 0.7017364
+>>>>>>> parent of 7d75028 (Invisibility bug fix)
       objectReference: {fileID: 0}
     - target: {fileID: 1109254911694180888, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
       propertyPath: m_LocalRotation.x
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8324,10 +8345,14 @@ PrefabInstance:
 =======
       value: -0.08059091
 >>>>>>> parent of 7d75028 (Invisibility bug fix)
+=======
+      value: -0.08059091
+>>>>>>> parent of 7d75028 (Invisibility bug fix)
       objectReference: {fileID: 0}
     - target: {fileID: 1109254911694180888, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
       propertyPath: m_LocalRotation.y
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8345,10 +8370,14 @@ PrefabInstance:
 =======
       value: -0.7032414
 >>>>>>> parent of 7d75028 (Invisibility bug fix)
+=======
+      value: -0.7032414
+>>>>>>> parent of 7d75028 (Invisibility bug fix)
       objectReference: {fileID: 0}
     - target: {fileID: 1109254911694180888, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
       propertyPath: m_LocalRotation.z
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8363,6 +8392,9 @@ PrefabInstance:
 =======
       value: -0.08073393
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
+=======
+      value: -0.08076376
+>>>>>>> parent of 7d75028 (Invisibility bug fix)
 =======
       value: -0.08076376
 >>>>>>> parent of 7d75028 (Invisibility bug fix)
@@ -8414,6 +8446,7 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0.039409187
 =======
       value: 0.039409194
@@ -8427,10 +8460,14 @@ PrefabInstance:
 =======
       value: 0.039409187
 >>>>>>> parent of 7d75028 (Invisibility bug fix)
+=======
+      value: 0.039409187
+>>>>>>> parent of 7d75028 (Invisibility bug fix)
       objectReference: {fileID: 0}
     - target: {fileID: 1109254913439866490, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
       propertyPath: m_LocalRotation.y
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8448,10 +8485,14 @@ PrefabInstance:
 =======
       value: 0.000584976
 >>>>>>> parent of 7d75028 (Invisibility bug fix)
+=======
+      value: 0.000584976
+>>>>>>> parent of 7d75028 (Invisibility bug fix)
       objectReference: {fileID: 0}
     - target: {fileID: 1109254913439866490, guid: 72892efc0c8b6cb46b8ddfa012ca00f3,
         type: 3}
       propertyPath: m_LocalRotation.z
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8466,6 +8507,9 @@ PrefabInstance:
 =======
       value: -0.0000084880585
 >>>>>>> parent of 736a41d (Merge branch 'main' into Liam-Dev-2)
+=======
+      value: -0.00002307018
+>>>>>>> parent of 7d75028 (Invisibility bug fix)
 =======
       value: -0.00002307018
 >>>>>>> parent of 7d75028 (Invisibility bug fix)
@@ -27362,18 +27406,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97f60b60cde36a741ba6e698e25e6655, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &729071652 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8939302617054967571, guid: 0bcdaabe72e82944aad9e655f38f4ed5,
-    type: 3}
-  m_PrefabInstance: {fileID: 6270610}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 729071646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b745165f66072404b8abc62151fe2326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &729071652 stripped
